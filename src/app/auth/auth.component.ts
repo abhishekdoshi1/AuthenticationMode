@@ -27,7 +27,9 @@ export class AuthComponent implements OnInit {
         this.signInForm = this.fb.group({
             email:['',[Validators.required, Validators.email]],
             password :['',[Validators.required , Validators.minLength(8)]]
-        })
+          
+          })
+          console.log("Ahss");
 
     
   }
