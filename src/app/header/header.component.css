@@ -1,0 +1,19 @@
+ .pop-up-profile
+{
+    display: none;
+} 
+
+.avtar-profile:hover .pop-up-profile  
+{
+    visibility: visible;
+} 
+.nav-bg
+{
+    background-color: #f082a8;
+}
+
+.mat-bgcolor
+{
+background-color:#313941
+}
+

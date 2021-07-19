@@ -1,0 +1,48 @@
+<div>
+  <mat-progress-bar mode="indeterminate" class="mat-style" *ngIf="authservice.isprogressbarloading | async"></mat-progress-bar>
+</div>
+<div class="container mt-0">
+<!-- <img src="https://4.bp.blogspot.com/-NusT8_BxXvU/WigtjvJvKLI/AAAAAAABOyg/VP7N3f2xgkAOOU2LPKaVCBdTsMiDJp_EgCK4BGAYYCw/s1600/Web-design.jpg" class="bgimg" >   -->
+<div class="row mt-5">
+    <div class="col col-4">
+    </div>
+    <div class="col col-4 signin-bgcolor  shadow-lg">
+      <!-- *ngIf="authservice.isprogressbarloading | async" -->
+     
+      <div *ngIf="error" class="alert alert-danger" role="alert">
+        <strong>AN Error Occured: </strong>{{error}}
+    </div>
+      <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="pt-4">
+        <div class="form-group input-group">
+            <!-- <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-envelope"></i> 
+              </span>
+            </div> -->
+            <input type="text" class="form-control input-style" placeholder="Email" formControlName="email" #email>
+            <small class="w-100 text-danger" *ngIf="!signInForm.get('email').valid && signInForm.get('email').touched && signInForm.get('email').dirty">Please Enter Valid Email</small>
+          </div>
+          <div class="form-group input-group mt-3">
+            <!-- <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-lock"></i>
+              </span>
+            </div> -->
+            <input type="password" class="form-control input-style" placeholder="Password" formControlName="password">
+            <small class="w-100 text-danger"  *ngIf="!signInForm.get('password').valid && signInForm.get('password').touched && signInForm.get('email').dirty">Please Enter Valid Password</small>
+          </div>
+          <div class="form-group mt-3">
+            <button type="submit" class="btn btn-block btn-outline-secondary form-control btn-dark text-light btn-style">
+              {{loginMode ? 'Sign In' : 'Creat Account'}}
+            </button>
+          </div>
+          <p class="mb-0 mt-2 text-dark font-style">{{loginMode ? 'Dont Have an Account?' : 'Already have Accont?'}} <a href="#" (click)="onModeSwitch()" class="text-dark">{{loginMode ? 'Creat One?' : 'Sign In'}}</a></p>
+          <p ><a href="" class="text-dark font-style" [routerLink]="['PasswordReset']">Forget Password</a></p>
+        </form>  
+    </div>
+    <div class="col col-4">
+    </div>
+</div>
+</div>
+
+

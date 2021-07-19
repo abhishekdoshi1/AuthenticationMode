@@ -1,0 +1,42 @@
+.bgimg
+{
+    position: absolute;
+    max-width: 100%;
+    opacity: 0.2;
+    left: 0px;
+}
+.signin-bgcolor
+{
+    background-color: #f082a8;
+    border-radius: 38px;
+}
+
+
+.input-style
+{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
+}
+.btn-style
+{
+    border-radius: 50px;
+}
+
+.font-style
+{
+    font-weight: 100;
+}
+.input-style:focus
+{
+    /* border: 1px solid #f082a8; */
+    outline: none;
+}
+.mat-style
+{
+    margin-left: 15px;
+    width: 91%;
+}

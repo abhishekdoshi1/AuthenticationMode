@@ -1,0 +1,9 @@
+<nav class="navbar navbar-light my-2 my-lg-0 nav-bg">
+  <img  src="../../assets/Avtar.png" width="3%" class="avtar-profile ml-4">    
+      <span class="ml-3 text-dark">Welcome : {{getEmail}}</span> 
+      <div *ngIf="!isSignIn" class="btn btn-sm bg-dark text-light mr-3" type="button" style="margin-right: 12px;">Sign In</div>
+      <div *ngIf="isSignIn" class="btn btn-sm bg-dark text-light d-flex justify-content-end" style="margin-left: 7px;" type="button" (click)="SignOut()">Sign Out</div>  
+    </nav>
+    
+    
+
